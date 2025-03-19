@@ -135,7 +135,10 @@ const cancelNewCard = () => {
 }
 
 const deleteCard = (cardId: number) => {
-  column.value.cards = column.value.cards.filter(card => card.id !== cardId);
+  	const index = column.value.cards.findIndex(card => card.id === cardId);
+	if (index !== -1) {
+		column.value.cards.splice(index, 1);
+	}
 };
 </script>
 

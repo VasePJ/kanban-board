@@ -70,7 +70,8 @@ const saveCard = () => {
 	cardTitle.value?.validate()
 		.then((errors) => {
 		if (errors.length === 0) {
-		card.value = cardEdit.value;
+		card.value.title = cardEdit.value.title;
+		card.value.description = cardEdit.value.description;
 		card.value.isEditing = false;
 		emit('save');
 	}
