@@ -6,6 +6,7 @@ import vuetify from 'vite-plugin-vuetify';
 
 export default defineConfig({
   plugins: [vue()],
+  base: '/kanban-board/',
    test: { 
     globals: true,
     server: {
